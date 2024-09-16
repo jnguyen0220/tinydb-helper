@@ -1,6 +1,8 @@
 [tool.poetry]
 name = "tinydb-helper"
 version = "0.1.0"
+repository = "https://github.com/jnguyen0220/tinydb-helper"
+documentation = "https://github.com/jnguyen0220/tinydb-helper/blob/main/README.md"
 description = "Tinydb CRUD wrapper for table"
 authors = ["Jonny Nguyen <jonny_nguyen@outlook.com>"]
 readme = "README.md"
