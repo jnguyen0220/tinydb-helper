@@ -1,5 +1,5 @@
 # Tinydb Helper
-A tinydb crud wrapper that make crud operations a breeze
+A Tinydb crud wrapper that make crud operations a breeze
 
 ## Installation
 You can install the package using pip:
@@ -9,7 +9,7 @@ pip install tinydb-helper
 ```
 
 ## Usage
-This package will install tinydb
+This package will install Tinydb
 
 ```python
 from tinydb_helper.helper import Table
