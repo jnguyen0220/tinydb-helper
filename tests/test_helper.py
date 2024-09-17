@@ -1,6 +1,6 @@
 import pytest
 from tinydb_helper.helper import Table
-from tinydb import TinyDB
+from tinydb import TinyDB, Query
 from tinydb.storages import MemoryStorage
 
 TABLE = "project"
@@ -38,4 +38,9 @@ def test_delete(table):
 def test_find(table):
     table.insert(item=dict(), id=ID)
     found = table.find(id=ID)
+    assert found is not None
+    
+def test_filter(table):
+    table.insert(item=dict(name=ID))
+    found = table.filter(Query()['name'] == ID)
     assert found is not None
