@@ -39,8 +39,9 @@ def test_find(table):
     table.insert(item=dict(), id=ID)
     found = table.find(id=ID)
     assert found is not None
-    
+
+
 def test_filter(table):
     table.insert(item=dict(name=ID))
-    found = table.filter(Query()['name'] == ID)
+    found = table.filter(Query()["name"] == ID)
     assert found is not None
