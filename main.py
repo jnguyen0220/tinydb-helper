@@ -1,5 +1,5 @@
 from tinydb_helper.helper import Table
-from tinydb import TinyDB
+from tinydb import TinyDB, Query
 import time
 
 
@@ -15,6 +15,7 @@ def main() -> None:
 
     person.all()
     person.find(id="0")
+    person.filter(Query()['first'] == 'first-0')
     person.update(id="0", item=dict(test="pass"))
     person.delete(id="0")
 

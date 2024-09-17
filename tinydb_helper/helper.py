@@ -34,5 +34,8 @@ class Table:
         self.table.remove(doc_ids=[found.doc_id])
         return id
 
-    def find(self, id: str) -> str:
+    def find(self, id: str) -> dict:
         return self.table.get(self.search[self.primary_key] == id)
+    
+    def filter(self, conditions) -> dict:
+        return self.table.search(conditions)

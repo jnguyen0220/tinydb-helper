@@ -13,7 +13,7 @@ This package will install Tinydb
 
 ```python
 from tinydb_helper.helper import Table
-from tinydb import TinyDB
+from tinydb import TinyDB, Query
 import time
 
 def main() -> None:
@@ -36,6 +36,9 @@ def main() -> None:
 
     # Exemple find person object matching primary key field equal to "0"
     person.find(id="0")
+
+    # Exemple filter person table base on Tinydb Query conditions
+    person.filter(Query()['first'] == 'first-0')
 
     # Exemple update person object matching primary key field equal to "0" 
     person.update(id="0", item=dict(test='pass'))
