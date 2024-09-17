@@ -36,6 +36,6 @@ class Table:
 
     def find(self, id: str) -> dict:
         return self.table.get(self.search[self.primary_key] == id)
-    
+
     def filter(self, conditions) -> dict:
         return self.table.search(conditions)
